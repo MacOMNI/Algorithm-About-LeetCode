@@ -1,4 +1,4 @@
-# LeetCode  [TwoSum](https://leetcode.com/problems/two-sum/solution/)
+# LeetCode No.1  [TwoSum](https://leetcode.com/problems/two-sum/solution/)
 
 ### 题目描述
 
@@ -16,31 +16,70 @@
 ```
 
 ### 题目解析
+关键因素分析:
+1. 两个数之和(当前下标数字如果是目标结果,那么另外一张下标数字数值已经确认);
+2. 有切只有一个答案(不用考虑多种情况);
+3. 同一位置元素只能一次;
 
-使用 Map字典映射来解决问题。
+使用 Map字典映射来解决问题:
 
-设置一个 map 容器 record 用来记录元素的值与索引，然后遍历数组 nums。
+1. 倒序 遍历 `nums`, 设置元素数值与下标 map[nums[index]] = index;
 
-* 每次遍历时使用临时变量 complement 用来保存目标值与当前值的差值
-* 在此次遍历中查找 record ，查看是否有与 complement 一致的值，如果查找成功则返回查找值的索引值与当前变量的值 i
-* 如果未找到，则在 record 保存该元素与索引值 i
+2. 正序遍历 `nums` , 判断 target - nums[index] 是否 在 map 对象上有存储;
+3. 如果 `步骤 2` 存在,并且符合`因素3` 即 target - nums[index] != index;
+4. 满足`步骤 3`的 index 以及 target - nums[index], 即是目标结果
 
+测试 cases:
+
+```
+1. nums = [3,3], target = 6
+2. nums = [3, 2, 5, 8, -2], target = 6
+```
 时间复杂度：O(n)
 空间复杂度：O(n)
+
 
 ### 代码实现
 
 `Swift` 版本实现:
 
 ```Swift
-
+class Solution {
+        func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+            var map = [Int:Int]()
+            for index in (0..<nums.count).reversed() {
+                map[nums[index]] = index
+            }
+            for index in 0..<nums.count {
+                if map[target - nums[index]] != nil  && index != map[target - nums[index]]{
+                    return [index,map[target - nums[index]]!]
+                }
+            }
+            return []
+        }
+}
 
 ```
 
 `Golang` 版本实现:
 
 ```golang
+func twoSum(nums []int, target int) []int {
+	var hashMap = make(map[int]int, 0)
 
+	for i := len(nums) - 1; i > 0; i-- {
+		hashMap[nums[i]] = i
+	}
+	for i := 0; i < len(nums); i++ {
+		if val, ok := hashMap[target-nums[i]]; ok {
+			if val != i {
+				return []int{i, val}
+			}
+		}
+
+	}
+	return []int{}
+}
 
 ```
 
