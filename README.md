@@ -1,5 +1,5 @@
 # Algorithm-about-swift
-学习 swift 并写点小算法
+学习 swift & Golang 写点小算法
 
 | Algorithm | Time | Memory |Date|
 |:-------:|:-------:|:------|:------|
