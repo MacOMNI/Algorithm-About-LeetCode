@@ -3,4 +3,4 @@
 
 | Algorithm | Time | Memory |Date|
 |:-------:|:-------:|:------|:------|
-|[QuickSort ](http://www.jianshu.com/p/1817ee67d21c) | O(nlogn) | O(n) |2016.11.09|
+|[TwoSum ](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_TwoSum_1.md) | O(n) | O(n) |2020.04.03|
