@@ -20,7 +20,10 @@ class LeetCodeTests: XCTestCase {
     }
 
     func testExample() {
-        print(Solution.init().twoSum([1,2],3))
+       // print(Solution.init().twoSum([-2, 7, 11, 15],9))
+        print(Solution.init().twoSum([3, 2, 4],6))
+        print(Solution.init().twoSum([3, 3],6))
+
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
