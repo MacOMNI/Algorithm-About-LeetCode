@@ -41,26 +41,6 @@
 
 ### 代码实现
 
-`Swift` 版本实现:
-
-```Swift
-class Solution {
-        func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-            var map = [Int:Int]()
-            for index in (0..<nums.count).reversed() {
-                map[nums[index]] = index
-            }
-            for index in 0..<nums.count {
-                if map[target - nums[index]] != nil  && index != map[target - nums[index]]{
-                    return [index,map[target - nums[index]]!]
-                }
-            }
-            return []
-        }
-}
-
-```
-
 `Golang` 版本实现:
 
 ```golang
@@ -86,4 +66,3 @@ func twoSum(nums []int, target int) []int {
 | Status | Runtime | Memory |Language|
 |:-------:|:-------:|:------|:------|
 |Accepted|4 ms|3.8 MB	 |golang|
-|Accepted|40 ms|21.3 MB	 |swift|

@@ -46,10 +46,10 @@ func Test_ReverseList(t *testing.T) {
 	// 	listHead = tmp
 	// }
 	// fmt.Println()
-	//listHead := reverseBetweenII(head1, 1, 5)
+	listHead := reverseBetween(head1, 1, 5)
 	//listHead := reverseBetween(head1, 2, 4)
 
-	listHead := reverseBetween(head1, 1, 1)
+	//listHead := reverseBetween(head1, 1, 1)
 	for listHead != nil {
 		tmp := listHead.Next
 		fmt.Printf("%d->", listHead.Val)
