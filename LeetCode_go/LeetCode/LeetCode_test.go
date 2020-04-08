@@ -10,6 +10,24 @@ func Test_TwoSum(t *testing.T) {
 	fmt.Println(twoSum([]int{3, 2, 5, 8, -2}, 6))
 
 }
+func Test_LengthOfLongestSubstring(t *testing.T) {
+	fmt.Println(lengthOfLongestSubstring("tmmzuxt"))
+
+	fmt.Println(lengthOfLongestSubstring("aabaab!bb"))
+
+	fmt.Println(lengthOfLongestSubstring("abba"))
+
+	fmt.Println(lengthOfLongestSubstring(""))
+	fmt.Println(lengthOfLongestSubstring("au"))
+
+	fmt.Println(lengthOfLongestSubstring("abcabcdefg"))
+	fmt.Println(lengthOfLongestSubstring("abcadfeg"))
+
+	fmt.Println(lengthOfLongestSubstring("abcabcbb"))
+	fmt.Println(lengthOfLongestSubstring("bbbbb"))
+	fmt.Println(lengthOfLongestSubstring("pwwkew"))
+	fmt.Println(lengthOfLongestSubstring("cdd"))
+}
 
 func Test_ReverseList(t *testing.T) {
 	head5 := &ListNode{
