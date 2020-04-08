@@ -1,4 +1,4 @@
-# LeetCode No.1  [LongestSubstringWithoutRepeatingCharacters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+# LeetCode No.3  [LongestSubstringWithoutRepeatingCharacters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 ### 题目描述
 
@@ -14,26 +14,27 @@
 
 ### 题目解析
 关键因素分析:
-1. 两个数之和(当前下标数字如果是目标结果,那么另外一张下标数字数值已经确认);
-2. 有切只有一个答案(不用考虑多种情况);
-3. 同一位置元素只能一次;
+1. 无重复字符串;
+2. 连续子串;
 
 解决问题:
 
-1. 倒序 遍历 `nums`, 设置元素数值与下标 map[nums[index]] = index;
-
-2. 正序遍历 `nums` , 判断 target - nums[index] 是否 在 map 对象上有存储;
-3. 如果 `步骤 2` 存在,并且符合`因素3` 即 target - nums[index] != index;
-4. 满足`步骤 3`的 index 以及 target - nums[index], 即是目标结果
+1. 遍历字符串时候, 用hashmap 找到当前字节的前一个 index;
+2. 找到当前下标的最长子串的起始下标 preIndex;
+3. 所有 当前下标到 preIndex 差值最大的即为最优解;
 
 测试 cases:
 
 ```
-1. nums = [3,3], target = 6
-2. nums = [3, 2, 5, 8, -2], target = 6
+输入: "abcabcdefg"
+输出: 7
+输入: "abcadfeg"
+输出: 7
+输入: "tmmzuxt"
+输出: 5
 ```
-时间复杂度：O(n)
-空间复杂度：O(n)
+时间复杂度：O(1)
+空间复杂度：O(1)
 
 
 ### 代码实现
@@ -48,25 +49,37 @@
 `Golang` 版本实现:
 
 ```golang
-func twoSum(nums []int, target int) []int {
+func lengthOfLongestSubstring(s string) int {
 	var hashMap = make(map[int]int, 0)
+	lcs := 0
+	preIndex := 0
+	for i, ch := range s {
 
-	for i := len(nums) - 1; i > 0; i-- {
-		hashMap[nums[i]] = i
-	}
-	for i := 0; i < len(nums); i++ {
-		if val, ok := hashMap[target-nums[i]]; ok {
-			if val != i {
-				return []int{i, val}
+		if val, ok := hashMap[int(ch)]; ok {
+			if preIndex <= val {
+				if i-preIndex > lcs {
+					lcs = i - preIndex
+				}
+				preIndex = val + 1
+			} else {
+				if i-preIndex+1 > lcs {
+					lcs = i - preIndex + 1
+				}
+			}
+
+		} else {
+			if i-preIndex+1 > lcs {
+				lcs = i - preIndex + 1
 			}
 		}
-
+		hashMap[int(ch)] = i
+		//	fmt.Println("preIndex ", preIndex, " ", string(ch), lcs)
 	}
-	return []int{}
+	return lcs
 }
 
 ```
 
 | Status | Runtime | Memory |Language|
 |:-------:|:-------:|:------|:------|
-|Accepted|4 ms|3.8 MB	 |golang|
+|Accepted|0 ms|3.4 MB	 |golang|
