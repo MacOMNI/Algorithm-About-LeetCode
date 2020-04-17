@@ -5,6 +5,18 @@ import (
 	"testing"
 )
 
+func Test_LongestPalindrome(t *testing.T) {
+	fmt.Println(longestPalindrome("babadada"))
+
+	fmt.Println(longestPalindrome("babad"))
+	fmt.Println(longestPalindrome("cbbd"))
+	fmt.Println(longestPalindrome("acdffa"))
+	fmt.Println(longestPalindrome("bbcb"))
+	fmt.Println(longestPalindrome("a"))
+	fmt.Println(longestPalindrome("bb"))
+	fmt.Println(longestPalindrome("bbb"))
+
+}
 func Test_TwoSum(t *testing.T) {
 	fmt.Println(twoSum([]int{3, 3}, 6))
 	fmt.Println(twoSum([]int{3, 2, 5, 8, -2}, 6))
