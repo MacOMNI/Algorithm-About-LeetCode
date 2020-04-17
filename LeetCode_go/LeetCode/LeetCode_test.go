@@ -5,6 +5,23 @@ import (
 	"testing"
 )
 
+func Test_3Sum(t *testing.T) {
+	fmt.Println(threeSum([]int{4, 4, 3, -5, 0, 0, 0, -2, 3, -5, -5, 0}))
+
+	fmt.Println(threeSum([]int{-4, -1, -4, 0, 2, -2, -4, -3, 2, -3, 2, 3, 3, -4}))
+
+	fmt.Println(threeSum([]int{-4, -2, 1, -5, -4, -4, 4, -2, 0, 4, 0, -2, 3, 1, -5, 0}))
+	fmt.Println(threeSum([]int{1, 1, 0, 0, -2}))
+
+	fmt.Println(threeSum([]int{-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6}))
+
+	fmt.Println(threeSum([]int{-1, -4, 0, 2, 2}))
+	fmt.Println(threeSum([]int{-2, 0, 1, 1, 2}))
+
+	fmt.Println(threeSum([]int{0, 0, 0}))
+	fmt.Println(threeSum([]int{}))
+
+}
 func Test_LongestPalindrome(t *testing.T) {
 	fmt.Println(longestPalindrome("babadada"))
 
