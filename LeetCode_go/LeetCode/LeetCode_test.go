@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+func Test_MaxArea(t *testing.T) {
+	fmt.Println(maxArea([]int{1, 8, 6, 2, 5, 4, 8, 3, 7}))
+	fmt.Println(maxArea([]int{1, 8, 6, 2, 100, 114, 8, 3, 7}))
+	fmt.Println(maxArea([]int{1, 80, 6, 2, 100, 114, 8, 3, 7}))
+	fmt.Println(maxArea([]int{100, 80, 6, 2, 100, 114, 8, 3, 7}))
+
+}
+
 func Test_3Sum(t *testing.T) {
 	fmt.Println(threeSum([]int{4, 4, 3, -5, 0, 0, 0, -2, 3, -5, -5, 0}))
 
