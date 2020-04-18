@@ -8,4 +8,4 @@
 |[LengthOfLongestSubstring](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_LongSubOutRepCharacters_3.md) | O(n) | O(1) |2020.04.08|
 |[Longest Palindromic Substring](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_longestPalindrome_5.md) |  O(n^2) | O(n^2) |2020.04.17|
 |[3Sum](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_3Sum_15.md) |  O(n^2) | O(n^2) |2020.04.17|
-|[ContainerWithMostWater](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_ContainerWithMostWater_14.md) |  O(n^2) | O(n^2) |2020.04.18|
+|[ContainerWithMostWater](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_ContainerWithMostWater_14.md) |  O(n) | O(1) |2020.04.18|
