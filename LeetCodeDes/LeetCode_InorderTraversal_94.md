@@ -20,7 +20,8 @@
 
 ### 题目解析
 关键因素分析:
-
+1. *中序* 遍历 , L->ROOT->R;
+2. 递归 ,非递归;
 
 时间复杂度：O(n)
 空间复杂度：O(n)
@@ -31,6 +32,18 @@
 `Golang` 版本实现:
 
 ```golang
+func inorderTraversal(root *TreeNode) []int {
+	res := []int{}
+	if root == nil {
+		return res
+	}
+	res = append(res, inorderTraversal(root.Left)...)
+	res = append(res, []int{root.Val}...)
+
+	res = append(res, inorderTraversal(root.Right)...)
+	// res = append(res)
+	return res
+}
 
 
 
@@ -38,4 +51,4 @@
 
 | Status | Runtime | Memory |Language|
 |:-------:|:-------:|:------|:------|
-|Accepted|4 ms|3.8 MB	 |golang|
+|Accepted|0 ms|2.1 MB	 |golang|
