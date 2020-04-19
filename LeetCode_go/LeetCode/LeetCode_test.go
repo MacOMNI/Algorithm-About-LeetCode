@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+func Test_MaxSlidingWindow(t *testing.T) {
+	fmt.Println(maxSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
+	fmt.Println(maxSlidingWindow([]int{1, 3, -1, -3, -5, -3, -6, -7}, 3))
+
+	//fmt.Println(maxSlidingWindow([]int{1, 8, 6, 2, 100, 114, 8, 3, 7}, 3))
+
+}
 func Test_MaxArea(t *testing.T) {
 	fmt.Println(maxArea([]int{1, 8, 6, 2, 5, 4, 8, 3, 7}))
 	fmt.Println(maxArea([]int{1, 8, 6, 2, 100, 114, 8, 3, 7}))
