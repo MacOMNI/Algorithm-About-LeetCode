@@ -5,6 +5,31 @@ import (
 	"testing"
 )
 
+func Test_LRUCache(t *testing.T) {
+	cache := Constructor(3)
+	cache.Put(1, 1)
+	cache.Put(2, 2)
+	fmt.Println(cache.Get(1)) // 返回  1
+	cache.Put(3, 3)           // 该操作会使得密钥 2 作废
+	fmt.Println(cache.Get(2)) // 返回 -1 (未找到)
+	cache.Put(4, 4)           // 该操作会使得密钥 1 作废
+	fmt.Println(cache.Get(1)) // 返回 -1 (未找到)
+	fmt.Println(cache.Get(3)) // 返回  3
+	fmt.Println(cache.Get(4)) // 返回  4
+	//fmt.Println(medianSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
+}
+
+func Test_LRUCache1(t *testing.T) {
+	cache := Constructor(3)
+	cache.Put(2, 1)
+	cache.Put(1, 1)
+	cache.Put(2, 3)
+	cache.Put(4, 1)
+	fmt.Println(cache.Get(1))
+	fmt.Println(cache.Get(2))
+	//	fmt.Println(cache.Get(4)) // 返回  4
+	//fmt.Println(medianSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
+}
 func Test_LongestCommonSubsequence(t *testing.T) {
 	fmt.Println(longestCommonSubsequence("abcde", "ace"))
 	//fmt.Println(medianSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
