@@ -5,6 +5,10 @@ import (
 	"testing"
 )
 
+func Test_LongestCommonSubsequence(t *testing.T) {
+	fmt.Println(longestCommonSubsequence("abcde", "ace"))
+	//fmt.Println(medianSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
+}
 func Test_MedianSlidingWindow(t *testing.T) {
 	fmt.Println(medianSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
 	//fmt.Println(medianSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))

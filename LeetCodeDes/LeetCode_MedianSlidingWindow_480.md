@@ -96,4 +96,4 @@ func calMedianValue(nums []int) float64 {
 
 | Status | Runtime | Memory |Language|
 |:-------:|:-------:|:------|:------|
-|Accepted|20 ms|6.4 MB	 |golang|
+|Accepted|44 ms|6.9 MB	 |golang|
