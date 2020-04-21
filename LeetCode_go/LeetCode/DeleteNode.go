@@ -61,7 +61,11 @@ func deleteNode(root *TreeNode, key int) *TreeNode {
 			node = node.Right
 		}
 		if preMaxNode != nil {
-			preMaxNode.Right = nil
+			if node.Left == nil {
+				preMaxNode.Right = nil
+			} else {
+				preMaxNode.Right = node.Left
+			}
 		} else {
 			findNode.Left = nil
 		}

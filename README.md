@@ -17,3 +17,4 @@
 |480|[滑动窗口中位数](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_MedianSlidingWindow_480.md) |  O(nlg(k)) | O(n) |2020.04.20|
 |146|[LRU缓存机制](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_LRUCache_146.md) |  O(nlg(k)) | O(n) |2020.04.20|
 |59|[螺旋矩阵 II](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_SpiralMatrixII_59.md) |  O(n^2) | O(n^2) |2020.04.21|
+|450|[删除二叉搜索树中的节点](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_DeleteNodeinaBST_450.md) |  O(n) | O(n) |2020.04.21|
