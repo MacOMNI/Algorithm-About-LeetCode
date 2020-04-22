@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+func Test_NLIS(t *testing.T) {
+	//	fmt.Println(findNumberOfLIS([]int{1, 3, 5, 4, 7}))
+	//	fmt.Println(findNumberOfLIS([]int{7, 9}))
+	fmt.Println(findNumberOfLIS([]int{7, 7, 7, 101, 18}))
+
+	//	fmt.Println(findNumberOfLIS([]int{2, 2, 2, 2, 2}))
+
+}
 func Test_LIS(t *testing.T) {
 	fmt.Println(lengthOfLIS([]int{}))
 
