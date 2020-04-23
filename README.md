@@ -23,3 +23,4 @@
 |72|[编辑距离](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_EditDistance_72.md) |  O(n^2) | O(n^2) |2020.04.22|
 |123|[买卖股票的最佳时机 III](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_MaxProfitIII_123.md) |  O(n^2) | O(n) |2020.04.23|
 |48|[旋转图片](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_RoteImage_48.md) |  O(n^2) | O(1) |2020.04.23|
+|334|[递增的三元子序列](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_IncreasingTriplet_334.md) |  O(n^2) | O(1) |2020.04.23|
