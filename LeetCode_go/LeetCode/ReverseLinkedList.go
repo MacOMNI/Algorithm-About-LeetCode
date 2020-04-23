@@ -53,7 +53,7 @@ func reverseBetween(head *ListNode, m int, n int) *ListNode {
 	return resNode
 }
 
-// 反转链表
+// 反转链表 list 1 2  3 4 5 head 1, tmp = list.next  list.next = head ,head = list list = tmp
 func reverseListI(head *ListNode) *ListNode {
 	listHead := head.Next
 	rverseHead := head
