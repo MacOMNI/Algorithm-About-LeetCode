@@ -18,6 +18,42 @@ func Test_MergeInterval(t *testing.T) {
 
 	}
 }
+func Test_MergeInterval1(t *testing.T) {
+	var matrix [][]int
+	matrix = append(matrix, []int{1, 4})
+	matrix = append(matrix, []int{0, 4})
+	matrix = append(matrix, []int{2, 3})
+
+	resMatrix := merge(matrix)
+	for i := 0; i < len(resMatrix); i++ {
+		fmt.Println(resMatrix[i])
+
+	}
+}
+func Test_MergeInterval3(t *testing.T) {
+	var matrix [][]int
+	matrix = append(matrix, []int{1, 4})
+	matrix = append(matrix, []int{8, 10})
+	matrix = append(matrix, []int{3, 9})
+
+	resMatrix := merge(matrix)
+	for i := 0; i < len(resMatrix); i++ {
+		fmt.Println(resMatrix[i])
+
+	}
+}
+func Test_MergeInterval2(t *testing.T) {
+	var matrix [][]int
+	matrix = append(matrix, []int{5, 14})
+	matrix = append(matrix, []int{0, 4})
+	matrix = append(matrix, []int{12, 13})
+
+	resMatrix := merge(matrix)
+	for i := 0; i < len(resMatrix); i++ {
+		fmt.Println(resMatrix[i])
+
+	}
+}
 func Test_InsertInterval(t *testing.T) {
 	var matrix [][]int
 	matrix = append(matrix, []int{1, 3})
