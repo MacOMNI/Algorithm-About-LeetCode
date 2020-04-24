@@ -7,14 +7,16 @@
 **示例:**
 
 ```
+
 输入: [3,2,1,5,6,4] 和 k = 2
 输出: 5
 你可以假设 k 总是有效的，且 1 ≤ k ≤ 数组的长度。
 
-
 ```
 
 ### 题目解析
+1. 排序 前 k 个数数组;
+2. 维护插入的 最大k个数据;
 
 时间复杂度：O(nlgn)
 空间复杂度：O(n)
@@ -25,22 +27,45 @@
 `Golang` 版本实现:
 
 ```golang
-func twoSum(nums []int, target int) []int {
-	var hashMap = make(map[int]int, 0)
 
-	for i := len(nums) - 1; i > 0; i-- {
-		hashMap[nums[i]] = i
+func findKthLargest(nums []int, k int) int {
+	n := len(nums)
+	if n == 1 {
+		return nums[0]
 	}
-	for i := 0; i < len(nums); i++ {
-		if val, ok := hashMap[target-nums[i]]; ok {
-			if val != i {
-				return []int{i, val}
-			}
+	knums := make([]int, k)
+	//sort.Reverse()
+	sort.Ints(nums[:k])
+	copy(knums[:], nums[:k])
+
+	for i := 0; i < k/2; i++ {
+		knums[i], knums[k-i-1] = knums[k-i-1], knums[i]
+	}
+	for i := k; i < n; i++ {
+		index := binarySearchArray(knums, nums[i])
+		if index < k {
+			copy(knums[index+1:], knums[index:])
+			knums[index] = nums[i]
 		}
-
 	}
-	return []int{}
+	return knums[k-1]
 }
+
+func binarySearchArray(knums []int, val int) int {
+	left := 0
+	right := len(knums)
+	mid := (left + right) >> 1
+	for left < right {
+		if knums[mid] < val {
+			right = mid
+		} else {
+			left = mid + 1
+		}
+		mid = (left + right) >> 1
+	}
+	return mid
+}
+
 
 ```
 
