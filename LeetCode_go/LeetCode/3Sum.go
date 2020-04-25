@@ -8,7 +8,6 @@ func threeSum(nums []int) [][]int {
 	sort.Ints(nums)
 	//fmt.Println(nums)
 	var res [][]int
-
 	n := len(nums)
 	if n <= 0 {
 		return res
