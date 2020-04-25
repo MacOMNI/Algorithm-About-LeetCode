@@ -29,7 +29,8 @@ wordList = ["hot","dot","dog","lot","log","cog"]
 ```
 
 ### 题目解析
-1. bfs
+1. bfs;
+2. 从 endword 剪枝;
 
 
 ### 代码实现
@@ -37,25 +38,48 @@ wordList = ["hot","dot","dog","lot","log","cog"]
 `Golang` 版本实现:
 
 ```golang
-func twoSum(nums []int, target int) []int {
-	var hashMap = make(map[int]int, 0)
-
-	for i := len(nums) - 1; i > 0; i-- {
-		hashMap[nums[i]] = i
-	}
-	for i := 0; i < len(nums); i++ {
-		if val, ok := hashMap[target-nums[i]]; ok {
-			if val != i {
-				return []int{i, val}
-			}
-		}
-
-	}
-	return []int{}
+func ladderLength(beginWord string, endWord string, wordList []string) int {
+    que := make([]string,0)
+    que = append(que,beginWord)
+    hashMap := make(map[string]int,0)
+   // n := len(wordList)
+    for _,val := range wordList {
+        hashMap[val] = 0
+    }
+    ans := 0
+    hashMap[beginWord] = 0
+    if _,ok := hashMap[endWord];ok {
+        for len(que) >0 {
+            word := que[0]
+            que = que[1:]
+            res ,_ := hashMap[word]
+            for i,val := range word {
+                for c:= 'a' ; c <= 'z';c++ {
+                    if val != c {
+                        next := word[:i] + string(c) + word[i+1:]
+                        if next == endWord {
+                            return res + 2
+                            
+                        }
+                        if val,ok := hashMap[next];ok{
+                            if val == 0 {
+                                hashMap[next] = res + 1
+                                que = append(que,next)
+                             } else if val > res+1 {
+                                hashMap[next] = res + 1
+                                que = append(que,next)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return ans
 }
 
 ```
 
 | Status | Runtime | Memory |Language|
 |:-------:|:-------:|:------|:------|
-|Accepted|4 ms|3.8 MB	 |golang|
+|Accepted|128 ms|3.8 MB	 |golang|

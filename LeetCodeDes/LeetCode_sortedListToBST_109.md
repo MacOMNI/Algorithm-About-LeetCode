@@ -1,40 +1,29 @@
-# LeetCode No.1  [TwoSum](https://leetcode.com/problems/two-sum/solution/)
+# LeetCode No.109  [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
 
 ### 题目描述
+给定一个单链表，其中的元素按升序排序，将其转换为高度平衡的二叉搜索树。
 
-给定一个整数数组 `nums` 和一个目标值 `target`，请你在该数组中找出和为目标值的那 **两个** 整数，并返回他们的数组下标。
-
-你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
-
+本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1。
 **示例:**
 
 ```
-给定 nums = [2, 7, 11, 15], target = 9
+给定的有序链表： [-10, -3, 0, 5, 9],
 
-因为 nums[0] + nums[1] = 2 + 7 = 9
-所以返回 [0, 1]
+一个可能的答案是：[0, -3, 9, -10, null, 5], 它可以表示下面这个高度平衡二叉搜索树：
+
+      0
+     / \
+   -3   9
+   /   /
+ -10  5
+
 ```
 
 ### 题目解析
 关键因素分析:
-1. 两个数之和(当前下标数字如果是目标结果,那么另外一张下标数字数值已经确认);
-2. 有切只有一个答案(不用考虑多种情况);
-3. 同一位置元素只能一次;
+1. 遍历有序链表;
+2. 递归构建平衡二叉树;
 
-使用 Map字典映射来解决问题:
-
-1. 倒序 遍历 `nums`, 设置元素数值与下标 map[nums[index]] = index;
-
-2. 正序遍历 `nums` , 判断 target - nums[index] 是否 在 map 对象上有存储;
-3. 如果 `步骤 2` 存在,并且符合`因素3` 即 target - nums[index] != index;
-4. 满足`步骤 3`的 index 以及 target - nums[index], 即是目标结果
-
-测试 cases:
-
-```
-1. nums = [3,3], target = 6
-2. nums = [3, 2, 5, 8, -2], target = 6
-```
 时间复杂度：O(n)
 空间复杂度：O(n)
 
@@ -44,25 +33,43 @@
 `Golang` 版本实现:
 
 ```golang
-func twoSum(nums []int, target int) []int {
-	var hashMap = make(map[int]int, 0)
+var nodeList []int
 
-	for i := len(nums) - 1; i > 0; i-- {
-		hashMap[nums[i]] = i
+func sortedListToBST(head *ListNode) *TreeNode {
+	nodeList = make([]int, 0)
+	for head != nil {
+		nodeList = append(nodeList, head.Val)
+		head = head.Next
 	}
-	for i := 0; i < len(nums); i++ {
-		if val, ok := hashMap[target-nums[i]]; ok {
-			if val != i {
-				return []int{i, val}
-			}
-		}
-
-	}
-	return []int{}
+	//fmt.Println(nodeList)
+	return buildTree(nodeList)
 }
+func buildTree(array []int) *TreeNode {
+	n := len(array)
+	if n == 0 {
+		return nil
+	}
+	if n == 1 {
+		return &TreeNode{
+			Val:   array[0],
+			Left:  nil,
+			Right: nil,
+		}
+	}
+	rootIndex := n / 2
+	// fmt.Println(rootIndex)
+	// fmt.Println(rootIndex)
+
+	return &TreeNode{
+		Val:   array[rootIndex],
+		Left:  buildTree(array[:rootIndex]),
+		Right: buildTree(array[rootIndex+1:]),
+	}
+}
+
 
 ```
 
 | Status | Runtime | Memory |Language|
 |:-------:|:-------:|:------|:------|
-|Accepted|4 ms|3.8 MB	 |golang|
+|Accepted|480 ms|272 MB	 |golang|
