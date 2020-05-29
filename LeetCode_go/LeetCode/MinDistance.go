@@ -21,16 +21,16 @@ func minDistance(word1 string, word2 string) int {
 	for i := 0; i < m; i++ {
 		for j := 0; j < n; j++ {
 			if word1[j] == word2[i] {
-				dp[i+1][j+1] = min(dp[i][j], dp[i][j+1]+1, dp[i+1][j]+1)
+				dp[i+1][j+1] = min3(dp[i][j], dp[i][j+1]+1, dp[i+1][j]+1)
 			} else {
-				dp[i+1][j+1] = min(dp[i][j]+1, dp[i][j+1]+1, dp[i+1][j]+1)
+				dp[i+1][j+1] = min3(dp[i][j]+1, dp[i][j+1]+1, dp[i+1][j]+1)
 			}
 		}
 	}
 	//fmt.Println(dp)
 	return dp[m][n]
 }
-func min(a int, b int, c int) int {
+func min3(a int, b int, c int) int {
 	mm := a
 	if mm > b {
 		mm = b
