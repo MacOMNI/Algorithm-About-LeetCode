@@ -30,4 +30,4 @@
 |1038|[从二叉搜索树到更大和树](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_bstToGst_1038.md) |  O(nlgn) | O(n) |2020.04.25|
 |109|[有序链表转换二叉搜索树](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_sortedListToBST_109.md) |  O(nlgn) | O(n) |2020.04.25|
 |127|[单词接龙](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_ladderLength_127.md) |  O(n*26) | O(n) |2020.04.25|
-|320|[列举单词的全部缩写](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_generateAbbreviations_320.md) |  O(n*2^n) | O(n) |2020.04.27|
+|3|[无重复字符的最长子串](https://github.com/MacOMNI/Algorithm-About-LeetCode/blob/master/LeetCodeDes/LeetCode_lengthOfLongestSubstring_3.md) |  O(n) | O(n) |2020.10.21|
