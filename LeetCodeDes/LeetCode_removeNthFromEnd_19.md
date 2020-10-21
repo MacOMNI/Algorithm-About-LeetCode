@@ -24,7 +24,28 @@
 
 
 ### 代码实现
+`Swift` 版本实现:
 
+```Swift
+ func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
+        var headTmp = head
+        var preTmp = head
+        for _ in 0..<n {
+            headTmp = headTmp?.next
+        }
+        if headTmp == nil {
+           return head?.next
+        }
+        while headTmp?.next != nil {
+            headTmp = headTmp?.next
+            preTmp = preTmp?.next
+        }
+       
+        preTmp?.next = preTmp?.next?.next
+        return head
+    }
+
+```
 `Golang` 版本实现:
 
 ```golang

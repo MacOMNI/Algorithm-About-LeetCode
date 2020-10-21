@@ -18,6 +18,20 @@ class LeetCodeTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    func testRemoveNthFromEnd() {
+        let node5 = ListNode.init(val: 5, next: nil)
+        let node4 = ListNode.init(val: 4, next: node5)
+        let node3 = ListNode.init(val: 3, next: node4)
+        let node2 = ListNode.init(val: 2, next: node3)
+        let node1 = ListNode.init(val: 1, next: node2)
+        var nextNode = Solution.init().removeNthNumber(head: node1, n: 5)
+        while nextNode != nil {
+            print(nextNode?.val)
+            nextNode = nextNode?.next
+        }
+        print(nextNode)
+
+    }
     func testLengthOfLongSubString() {
        // print(Solution.init().twoSum([-2, 7, 11, 15],9))
 //        print(Solution.init().lengthOfLongSubString(str: "abcabcbb"))
