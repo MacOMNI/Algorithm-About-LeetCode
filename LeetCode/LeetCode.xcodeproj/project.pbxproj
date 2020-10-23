@@ -18,6 +18,7 @@
 		5A8E5D762436ED480054C3F1 /* TowSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E5D752436ED480054C3F1 /* TowSum.swift */; };
 		5A8E5D772436ED480054C3F1 /* TowSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E5D752436ED480054C3F1 /* TowSum.swift */; };
 		5A8E5D782436ED480054C3F1 /* TowSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E5D752436ED480054C3F1 /* TowSum.swift */; };
+		5A98F22B2542DEE100AC3805 /* MinPathSumClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A98F22A2542DEE100AC3805 /* MinPathSumClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5A8E5D672436ECD40054C3F1 /* LeetCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeUITests.swift; sourceTree = "<group>"; };
 		5A8E5D692436ECD40054C3F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A8E5D752436ED480054C3F1 /* TowSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowSum.swift; sourceTree = "<group>"; };
+		5A98F22A2542DEE100AC3805 /* MinPathSumClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinPathSumClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				5A8E5D752436ED480054C3F1 /* TowSum.swift */,
+				5A98F22A2542DEE100AC3805 /* MinPathSumClass.swift */,
 			);
 			name = LeetCode;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A98F22B2542DEE100AC3805 /* MinPathSumClass.swift in Sources */,
 				5A8E5D4A2436ECD20054C3F1 /* ViewController.swift in Sources */,
 				5A8E5D462436ECD20054C3F1 /* AppDelegate.swift in Sources */,
 				5A8E5D762436ED480054C3F1 /* TowSum.swift in Sources */,

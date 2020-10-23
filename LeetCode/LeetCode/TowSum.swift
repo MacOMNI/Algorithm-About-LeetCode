@@ -20,6 +20,21 @@ class ListNode {
     }
 }
 class Solution {
+    
+    func maxArea(_ height: [Int]) -> Int {
+        var r = height.count - 1,l = 0, ans = 0
+        while l < r {
+            let low = min(height[l],height[r])
+            let res = low * (r-l)
+            ans = max(ans,res)
+            if low == height[l] {
+                l = l + 1
+            }else {
+                r = r - 1
+            }
+        }
+        return ans
+    }
     func removeNthNumber( head:ListNode?, n:Int) -> ListNode? {
         var headTmp = head
         var preTmp = head

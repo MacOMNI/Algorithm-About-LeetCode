@@ -18,6 +18,11 @@ class LeetCodeTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    func test_MinPathSum() {
+        let grid = [[1,2,5],[3,2,1]]
+        print(MinPathSum.init().minPathSum(grid: grid))
+        print("")
+    }
     func testRemoveNthFromEnd() {
         let node5 = ListNode.init(val: 5, next: nil)
         let node4 = ListNode.init(val: 4, next: node5)
