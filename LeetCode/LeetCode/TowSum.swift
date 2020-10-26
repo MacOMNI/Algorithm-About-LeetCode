@@ -7,10 +7,22 @@
 //
 
 import UIKit
-class ListNode {
-    var val:Int = 0
-    var next:ListNode?
-    init(val:Int) {
+//class ListNode {
+//    var val:Int = 0
+//    var next:ListNode?
+//    init(val:Int) {
+//        self.val = val
+//        self.next = nil
+//    }
+//    init(val:Int,next:ListNode?) {
+//        self.val = val
+//        self.next = next
+//    }
+//}
+public class ListNode {
+    public var val: Int
+    public var next: ListNode?
+    public init(_ val: Int) {
         self.val = val
         self.next = nil
     }
@@ -20,7 +32,29 @@ class ListNode {
     }
 }
 class Solution {
-    
+    func detectCycle(_ head: ListNode?) -> ListNode? {
+        // var head = head
+        var slow = head
+        var fast = head
+        while slow != nil && fast != nil {
+            if fast?.next != nil {
+                slow = slow!.next
+                fast = fast!.next?.next
+            } else {
+                return nil
+            }
+            if slow === fast {
+                var ptr = head
+                while(!(ptr === slow)) {
+                    ptr = ptr!.next
+                    slow = slow!.next
+                }
+                return ptr
+            }
+        }
+        return nil
+        
+    }
     func maxArea(_ height: [Int]) -> Int {
         var r = height.count - 1,l = 0, ans = 0
         while l < r {
@@ -42,13 +76,13 @@ class Solution {
             headTmp = headTmp?.next
         }
         if headTmp == nil {
-           return head?.next
+            return head?.next
         }
         while headTmp?.next != nil {
             headTmp = headTmp?.next
             preTmp = preTmp?.next
         }
-       
+        
         preTmp?.next = preTmp?.next?.next
         return head
     }
