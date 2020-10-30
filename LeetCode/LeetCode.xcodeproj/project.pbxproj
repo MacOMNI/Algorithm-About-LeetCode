@@ -21,6 +21,7 @@
 		5A8E5D772436ED480054C3F1 /* TowSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E5D752436ED480054C3F1 /* TowSum.swift */; };
 		5A8E5D782436ED480054C3F1 /* TowSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E5D752436ED480054C3F1 /* TowSum.swift */; };
 		5A98F22B2542DEE100AC3805 /* MinPathSumClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A98F22A2542DEE100AC3805 /* MinPathSumClass.swift */; };
+		5AB3CD14254BC1A900E50A54 /* PathSumIII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB3CD13254BC1A900E50A54 /* PathSumIII.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		5A8E5D692436ECD40054C3F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A8E5D752436ED480054C3F1 /* TowSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowSum.swift; sourceTree = "<group>"; };
 		5A98F22A2542DEE100AC3805 /* MinPathSumClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinPathSumClass.swift; sourceTree = "<group>"; };
+		5AB3CD13254BC1A900E50A54 /* PathSumIII.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathSumIII.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				5A98F22A2542DEE100AC3805 /* MinPathSumClass.swift */,
 				5A0E779F2545687E002A3766 /* TopKFrequentNums.swift */,
 				5A0E77A125457E91002A3766 /* ConvertBST.swift */,
+				5AB3CD13254BC1A900E50A54 /* PathSumIII.swift */,
 			);
 			name = LeetCode;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB3CD14254BC1A900E50A54 /* PathSumIII.swift in Sources */,
 				5A0E77A02545687E002A3766 /* TopKFrequentNums.swift in Sources */,
 				5A98F22B2542DEE100AC3805 /* MinPathSumClass.swift in Sources */,
 				5A8E5D4A2436ECD20054C3F1 /* ViewController.swift in Sources */,
