@@ -18,6 +18,11 @@ class LeetCodeTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    func test_UniquePaths() {
+        //print(UniquePaths)
+         print("")
+
+     }
     func test_TargetSum() {
         print(TargetSumWays.init().findTargetSumWays([1, 1, 1, 1, 1], 3))
         print("")

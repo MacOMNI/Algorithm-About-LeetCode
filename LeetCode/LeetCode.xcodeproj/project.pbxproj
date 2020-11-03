@@ -26,6 +26,7 @@
 		5AB3CD18254C058700E50A54 /* MergeTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB3CD17254C058700E50A54 /* MergeTree.swift */; };
 		5AB3CD1A254C1BAE00E50A54 /* InvertTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB3CD19254C1BAE00E50A54 /* InvertTree.swift */; };
 		5AE204E7255108B500FADD67 /* TargetSumWays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE204E6255108B500FADD67 /* TargetSumWays.swift */; };
+		5AEEB0E125512DEF00713B3A /* UniquePaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEB0E025512DEF00713B3A /* UniquePaths.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		5AB3CD17254C058700E50A54 /* MergeTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeTree.swift; sourceTree = "<group>"; };
 		5AB3CD19254C1BAE00E50A54 /* InvertTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertTree.swift; sourceTree = "<group>"; };
 		5AE204E6255108B500FADD67 /* TargetSumWays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSumWays.swift; sourceTree = "<group>"; };
+		5AEEB0E025512DEF00713B3A /* UniquePaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniquePaths.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				5AB3CD13254BC1A900E50A54 /* PathSumIII.swift */,
 				5AB3CD15254BF86500E50A54 /* SortList.swift */,
 				5AB3CD17254C058700E50A54 /* MergeTree.swift */,
+				5AEEB0E025512DEF00713B3A /* UniquePaths.swift */,
 			);
 			name = LeetCode;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				5AB3CD18254C058700E50A54 /* MergeTree.swift in Sources */,
 				5A8E5D482436ECD20054C3F1 /* SceneDelegate.swift in Sources */,
 				5AE204E7255108B500FADD67 /* TargetSumWays.swift in Sources */,
+				5AEEB0E125512DEF00713B3A /* UniquePaths.swift in Sources */,
 				5AB3CD1A254C1BAE00E50A54 /* InvertTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
