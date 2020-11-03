@@ -27,7 +27,7 @@ class SortList {
         
         sortList(fastHead)
         sortList(slowHead)
-        var resHead =
+      //  var resHead =
         
         return head
     }

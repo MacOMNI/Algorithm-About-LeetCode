@@ -18,6 +18,11 @@ class LeetCodeTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    func test_TargetSum() {
+        print(TargetSumWays.init().findTargetSumWays([1, 1, 1, 1, 1], 3))
+        print("")
+
+    }
     func test_ConvertBST() {
         
         let node1 = TreeNode.init(val: 4, left: TreeNode.init(val: 2), right:  TreeNode.init(val: 5))

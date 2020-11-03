@@ -104,7 +104,6 @@ class Solution {
         var subLength = 0 ;
         let len = str.count
         let array = Array<Character>(str)
-        
         var hashMap = [Character:Int]()
         var preIndex = -1
         for index in 0..<len {
