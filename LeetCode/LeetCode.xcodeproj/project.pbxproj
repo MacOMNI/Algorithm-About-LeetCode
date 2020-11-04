@@ -27,6 +27,7 @@
 		5AB3CD1A254C1BAE00E50A54 /* InvertTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB3CD19254C1BAE00E50A54 /* InvertTree.swift */; };
 		5AE204E7255108B500FADD67 /* TargetSumWays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE204E6255108B500FADD67 /* TargetSumWays.swift */; };
 		5AEEB0E125512DEF00713B3A /* UniquePaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEB0E025512DEF00713B3A /* UniquePaths.swift */; };
+		5AFFAE3C25525B060024B40D /* FindKthLargest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFAE3B25525B060024B40D /* FindKthLargest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		5AB3CD19254C1BAE00E50A54 /* InvertTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertTree.swift; sourceTree = "<group>"; };
 		5AE204E6255108B500FADD67 /* TargetSumWays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSumWays.swift; sourceTree = "<group>"; };
 		5AEEB0E025512DEF00713B3A /* UniquePaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniquePaths.swift; sourceTree = "<group>"; };
+		5AFFAE3B25525B060024B40D /* FindKthLargest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindKthLargest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				5AB3CD15254BF86500E50A54 /* SortList.swift */,
 				5AB3CD17254C058700E50A54 /* MergeTree.swift */,
 				5AEEB0E025512DEF00713B3A /* UniquePaths.swift */,
+				5AFFAE3B25525B060024B40D /* FindKthLargest.swift */,
 			);
 			name = LeetCode;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				5A8E5D4A2436ECD20054C3F1 /* ViewController.swift in Sources */,
 				5A8E5D462436ECD20054C3F1 /* AppDelegate.swift in Sources */,
 				5A8E5D762436ED480054C3F1 /* TowSum.swift in Sources */,
+				5AFFAE3C25525B060024B40D /* FindKthLargest.swift in Sources */,
 				5A0E77A225457E91002A3766 /* ConvertBST.swift in Sources */,
 				5AB3CD18254C058700E50A54 /* MergeTree.swift in Sources */,
 				5A8E5D482436ECD20054C3F1 /* SceneDelegate.swift in Sources */,
