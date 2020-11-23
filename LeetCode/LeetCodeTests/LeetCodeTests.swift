@@ -60,6 +60,22 @@ class LeetCodeTests: XCTestCase {
         print(MinPathSum.init().minPathSum(grid: grid))
         print("")
     }
+    func testSortList() {
+        let node5 = ListNode.init(val: 5, next: nil)
+        let node4 = ListNode.init(val: 4, next: node5)
+        let node3 = ListNode.init(val: 17, next: node4)
+        let node2 = ListNode.init(val: 2, next: node3)
+        let nodehead = ListNode.init(val: 9, next: node2)
+      //  var nextNode = SortList.init().sortList(nodehead)
+        //var nextNode = SortList().sortList(node1)
+        var nextNode = Solution.init().sortList(nodehead)
+        while nextNode != nil {
+            print(nextNode?.val)
+            nextNode = nextNode?.next
+        }
+        print(nextNode)
+        
+    }
     func testRemoveNthFromEnd() {
         let node5 = ListNode.init(val: 5, next: nil)
         let node4 = ListNode.init(val: 4, next: node5)

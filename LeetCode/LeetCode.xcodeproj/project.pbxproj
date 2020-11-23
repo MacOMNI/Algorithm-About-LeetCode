@@ -20,10 +20,10 @@
 		5A8E5D762436ED480054C3F1 /* TowSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E5D752436ED480054C3F1 /* TowSum.swift */; };
 		5A8E5D772436ED480054C3F1 /* TowSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E5D752436ED480054C3F1 /* TowSum.swift */; };
 		5A8E5D782436ED480054C3F1 /* TowSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E5D752436ED480054C3F1 /* TowSum.swift */; };
+		5A8EB66D2567BB6500E84692 /* InsertionSortList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8EB66C2567BB6500E84692 /* InsertionSortList.swift */; };
 		5A98F22B2542DEE100AC3805 /* MinPathSumClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A98F22A2542DEE100AC3805 /* MinPathSumClass.swift */; };
 		5A9B46A625676EB8008355A1 /* ListTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B46A525676EB8008355A1 /* ListTree.swift */; };
 		5AB3CD14254BC1A900E50A54 /* PathSumIII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB3CD13254BC1A900E50A54 /* PathSumIII.swift */; };
-		5AB3CD16254BF86500E50A54 /* SortList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB3CD15254BF86500E50A54 /* SortList.swift */; };
 		5AB3CD18254C058700E50A54 /* MergeTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB3CD17254C058700E50A54 /* MergeTree.swift */; };
 		5AB3CD1A254C1BAE00E50A54 /* InvertTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB3CD19254C1BAE00E50A54 /* InvertTree.swift */; };
 		5AE204E7255108B500FADD67 /* TargetSumWays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE204E6255108B500FADD67 /* TargetSumWays.swift */; };
@@ -68,10 +68,10 @@
 		5A8E5D672436ECD40054C3F1 /* LeetCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeUITests.swift; sourceTree = "<group>"; };
 		5A8E5D692436ECD40054C3F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A8E5D752436ED480054C3F1 /* TowSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowSum.swift; sourceTree = "<group>"; };
+		5A8EB66C2567BB6500E84692 /* InsertionSortList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSortList.swift; sourceTree = "<group>"; };
 		5A98F22A2542DEE100AC3805 /* MinPathSumClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinPathSumClass.swift; sourceTree = "<group>"; };
 		5A9B46A525676EB8008355A1 /* ListTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTree.swift; sourceTree = "<group>"; };
 		5AB3CD13254BC1A900E50A54 /* PathSumIII.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathSumIII.swift; sourceTree = "<group>"; };
-		5AB3CD15254BF86500E50A54 /* SortList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortList.swift; sourceTree = "<group>"; };
 		5AB3CD17254C058700E50A54 /* MergeTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeTree.swift; sourceTree = "<group>"; };
 		5AB3CD19254C1BAE00E50A54 /* InvertTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertTree.swift; sourceTree = "<group>"; };
 		5AE204E6255108B500FADD67 /* TargetSumWays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSumWays.swift; sourceTree = "<group>"; };
@@ -169,13 +169,13 @@
 				5A0E779F2545687E002A3766 /* TopKFrequentNums.swift */,
 				5A0E77A125457E91002A3766 /* ConvertBST.swift */,
 				5AB3CD13254BC1A900E50A54 /* PathSumIII.swift */,
-				5AB3CD15254BF86500E50A54 /* SortList.swift */,
 				5AB3CD17254C058700E50A54 /* MergeTree.swift */,
 				5AEEB0E025512DEF00713B3A /* UniquePaths.swift */,
 				5AFFAE3B25525B060024B40D /* FindKthLargest.swift */,
 				5AF95C642553EA0300A23B8E /* DiameterTree.swift */,
 				5AE3656A25541B1E008B160B /* SymmetricTree.swift */,
 				5A9B46A525676EB8008355A1 /* ListTree.swift */,
+				5A8EB66C2567BB6500E84692 /* InsertionSortList.swift */,
 			);
 			name = LeetCode;
 			sourceTree = "<group>";
@@ -311,7 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AB3CD16254BF86500E50A54 /* SortList.swift in Sources */,
+				5A8EB66D2567BB6500E84692 /* InsertionSortList.swift in Sources */,
 				5AB3CD14254BC1A900E50A54 /* PathSumIII.swift in Sources */,
 				5A9B46A625676EB8008355A1 /* ListTree.swift in Sources */,
 				5A0E77A02545687E002A3766 /* TopKFrequentNums.swift in Sources */,

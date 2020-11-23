@@ -32,6 +32,47 @@ public class ListNode {
     }
 }
 class Solution {
+    func sortList(_ head: ListNode?) -> ListNode? {
+        if head == nil || head?.next == nil  {
+            return head
+        }
+        var slowHead = head
+        var fastHead = head?.next
+        while fastHead != nil && fastHead?.next != nil {
+            slowHead = slowHead!.next
+            fastHead = fastHead!.next?.next
+        }
+//        if fastHead === slowHead {
+//            slowHead = slowHead!.next
+//        }
+        let tmpHead = slowHead?.next;
+        slowHead?.next = nil
+        return mergeSort(leftHead: sortList(head), rightHead: sortList(tmpHead))
+    }
+    
+    func mergeSort(leftHead: ListNode? , rightHead: ListNode?) -> ListNode? {
+        var leftHead = leftHead
+        var rightHead = rightHead
+        let head = ListNode.init(0)
+        var tmpHead = head
+        while leftHead != nil && rightHead != nil {
+            if leftHead!.val <= rightHead!.val {
+                tmpHead.next = leftHead
+                leftHead  = leftHead!.next
+            } else {
+                tmpHead.next = rightHead
+                rightHead  = rightHead!.next
+            }
+            tmpHead = tmpHead.next!
+        }
+        if leftHead != nil {
+            tmpHead.next = leftHead
+        }
+        if rightHead != nil {
+            tmpHead.next = rightHead
+        }
+        return head.next;
+    }
     func detectCycle(_ head: ListNode?) -> ListNode? {
         // var head = head
         var slow = head

@@ -9,16 +9,18 @@
 import Foundation
 
 class ListTree {
-    func flatten(node: TreeNode?) -> Void {
-        guard let node = node else {
+    var next: TreeNode?
+    func flatten(_ root: TreeNode?) {
+        guard let root = root else {
             return
         }
-       // let left = node.left
-        let  right = node.right
-        flatten(node: node.left)
-        node.right = node.left
-        flatten(node: right)
-        node.left = nil
-       // node.right = left
+        // let left = node.left
+        flatten(root.right)
+        flatten(root.left)
+        
+        root.right = next
+        // flatten(right)
+        root.left = nil
+        next = root
     }
 }
