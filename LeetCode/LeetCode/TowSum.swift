@@ -32,6 +32,37 @@ public class ListNode {
     }
 }
 class Solution {
+    func maxProduct(nums: [Int]) -> Int {
+        var ans = -Int.max
+        var current = 1
+        var currentIndex = -1
+        var dpos = [Int]()
+        for (index,item) in nums.enumerated() {
+            ans = max(ans,item)
+            if item != 0 {
+                current *= item
+                if item < 0 {
+                   dpos.append(current)
+                }
+                if index - currentIndex > 1 {
+                    ans = max(ans,current)
+                }
+                print(ans)
+            } else {
+                if index - currentIndex > 1 && dpos.count % 2 == 1 {
+                    ans = max(ans,current/dpos[0])
+                }
+                dpos = [Int]()
+                current = 1
+                currentIndex = index
+                print(index,current,ans)
+            }
+        }
+        if nums.count - 1 - currentIndex > 1 && dpos.count % 2 == 1 {
+            ans = max(ans,current/dpos[0])
+        }
+        return ans
+    }
     func sortList(_ head: ListNode?) -> ListNode? {
         if head == nil || head?.next == nil  {
             return head
