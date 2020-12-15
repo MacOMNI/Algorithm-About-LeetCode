@@ -13,27 +13,37 @@ class LinkList: NSObject {
     func isPalindrome(_ head: ListNode?) -> Bool {
         var head = head
         if head == nil {
-            return false
+            return true
         }
         var i = 0
         var fast = head
         var slow = head
-        while fast?.next != nil && fast?.next?.next != nil {//走一半
+        while fast?.next != nil  {//走一半
             fast = fast?.next!.next
             slow = slow?.next!
             i += 1
+            print(slow!.val)
         }
+        print("i = ",i)
         // 反转链表
-        var reverHead = ListNode.init(val: -1, next: slow)
-        while slow?.next != nil {
-            
+        // var reverHead = ListNode.init(-1)
+        let reverHead = slow
+        var tmpHead = reverHead
+        var preHead: ListNode?
+        while tmpHead != nil {
+            let next = tmpHead?.next
+            tmpHead?.next = preHead
+            preHead = tmpHead
+            tmpHead = next
         }
         
-        while reverHead.next != nil  {
-            if reverHead.next!.val != head?.val {
+        while preHead != nil  {
+            print(head?.val)
+            print(preHead!.val)
+            if preHead!.val != head?.val {
                 return false
             }
-            reverHead = reverHead.next!
+            preHead = preHead!.next
             head = head?.next
         }
         
