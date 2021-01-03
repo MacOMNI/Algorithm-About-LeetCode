@@ -14,7 +14,22 @@ class LeetCodeTests: XCTestCase {
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+    func testReveseList() {
+        let node5 = ListNode.init(val: 5, next: nil)
+        let node4 = ListNode.init(val: 4, next: node5)
+        let node3 = ListNode.init(val: 3, next: node4)
+        let node2 = ListNode.init(val: 2, next: node3)
+        let node1 = ListNode.init(val: 1, next: node2)
+        
+//        var nextNode = ReveveListClass.init().ReveveList(node1)
+        var nextNode = Solution.init().ReveveList(node1)
+        while nextNode != nil {
+            print(nextNode?.val)
+            nextNode = nextNode?.next
+        }
+        print(nextNode)
+        
+    }
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }

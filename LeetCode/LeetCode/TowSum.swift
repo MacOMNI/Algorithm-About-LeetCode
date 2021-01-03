@@ -32,6 +32,20 @@ public class ListNode {
     }
 }
 class Solution {
+    func lowestCommonAncestor(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode? {
+        if root == nil || root === p || root === q {
+            return root
+        }
+        let right = lowestCommonAncestor(root?.right, p, q)
+        let left = lowestCommonAncestor(root?.left, p, q)
+        if right == nil {
+            return left
+        }
+        if left == nil {
+            return right
+        }
+        return root
+    }
     func maxProduct(nums: [Int]) -> Int {
         var ans = -Int.max
         var current = 1
@@ -63,6 +77,7 @@ class Solution {
         }
         return ans
     }
+    
     func sortList(_ head: ListNode?) -> ListNode? {
         if head == nil || head?.next == nil  {
             return head
@@ -80,7 +95,21 @@ class Solution {
         slowHead?.next = nil
         return mergeSort(leftHead: sortList(head), rightHead: sortList(tmpHead))
     }
-    
+    func ReveveList(_ head: ListNode?) -> ListNode?{
+//        guard let head = head else {
+//            return nil
+//        }
+        var tmp = head
+        var pre: ListNode?
+        while tmp != nil {
+            let next = tmp?.next
+            tmp?.next = pre
+            pre = tmp
+            tmp = next
+            
+        }
+        return pre
+    }
     func mergeSort(leftHead: ListNode? , rightHead: ListNode?) -> ListNode? {
         var leftHead = leftHead
         var rightHead = rightHead
